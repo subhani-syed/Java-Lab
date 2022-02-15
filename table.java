@@ -13,8 +13,8 @@ public class table {
         t.setBounds(40,40,50,50);
         j.add(t);
 
-        JScrollPane sp = new JScrollPane(t);
-        j.add(sp);
+        // JScrollPane sp = new JScrollPane(t);
+        // j.add(sp);
 
         j.setSize(400,150);
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
