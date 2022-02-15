@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;  
 class gui implements ActionListner {
-    public static void main(String args[]){
+    gui(){
         JFrame frame = new JFrame("Ny Frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300,300);
@@ -15,9 +16,12 @@ class gui implements ActionListner {
         frame.add(t2);
         frame.add(t3);
         button.addActionListner(this);
-        void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent e){
             t3.setText("SUp!!");
         }
+    }
+    public static void main(String args[]){
+        new gui();
         // frame.setLayout(new FlowLayout(FlowLayout.CENTER));
     }
 }
