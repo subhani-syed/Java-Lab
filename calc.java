@@ -9,7 +9,7 @@ class calc{
 }
 class Calc implements ActionListener{
 	JTextField t1,t2,t3;
-	JButton b,b2;
+	JButton b1,b2;
 	JFrame frame;
 	public Calc(){
 		frame = new JFrame("Calculator");
@@ -19,27 +19,21 @@ class Calc implements ActionListener{
         t1.setText("Please enter a number");
         t2.setText("Please enter a number");
         t3.setText("Result");
-		b=new JButton("ADD");
+		b1=new JButton("ADD");
 		b2 = new JButton("SUB");
 		frame.add(t1);
 		frame.add(t2);
-		frame.add(b);
-		frame.add(b2);
         frame.add(t3);
-		b.addActionListener(this);
-		// b.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		int sum=Integer.parseInt(t1.getText())+Integer.parseInt(t2.getText());
-		// 		t3.setText(sum+"");
-		// 	}
-		// });
+		frame.add(b1);
+		frame.add(b2);
+		b1.addActionListener(this);
 		b2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				int sum=Integer.parseInt(t1.getText())-Integer.parseInt(t2.getText());
 				t3.setText(sum+"");
 			}
 		});		
-		frame.setSize(300,300);
+		frame.setSize(400,400);
 		frame.setVisible(true);
 		frame.setLayout(new FlowLayout());
 	}
