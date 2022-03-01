@@ -2,22 +2,27 @@ import java.util.*;
 
 class balanceException extends Exception{
     public String toString(){
-        return "Insufficient Balance";
+        return "Insufficient Balance Exception";
     }
 }
 class user_exception{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("Balance is 100");
-        int amount = sc.nextInt();
-        try{
-            if(amount>100){
-                throw new balanceException();
-            }else{
-                System.out.println("Balance is "+(100-amount));
+        while(true){
+            System.out.print("Enter the amount to withdraw: ");
+            int amount = sc.nextInt();
+            try{
+                if(100-amount<0){
+                    throw new balanceException();
+                }else{
+                    int bal = 100-amount;
+                    System.out.println("Balance is "+bal);
+                    break;
+                }
+            }catch(balanceException e){
+                System.out.println(e);
             }
-        }catch(balanceException e){
-            System.out.println(e);
         }
     }
 }
