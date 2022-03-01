@@ -2,7 +2,7 @@ import java.util.*;
 
 class thread1 implements Runnable{
     public void run(){
-        while(true){
+        for(int i=0;i<10;i++){
             try{
                 Thread.sleep(1000);
             }catch(Exception e){
@@ -10,12 +10,21 @@ class thread1 implements Runnable{
             }
             System.out.println("Hello");
         }
+        // Infinte Loop
+        // while(true){
+        //     try{
+        //         Thread.sleep(1000);
+        //     }catch(Exception e){
+        //         System.out.println(e);
+        //     }
+        //     System.out.println("Hello");
+        // }
     }
 }
 
 class thread2 implements Runnable{
     public void run(){
-        while(true){
+        for(int i=0;i<10;i++){
             try{
                 Thread.sleep(500);
             }catch(Exception e){
@@ -23,6 +32,15 @@ class thread2 implements Runnable{
             }
             System.out.println("Hello 2");
         }
+        // Infinte Loop
+        // while(true){
+        //     try{
+        //         Thread.sleep(500);
+        //     }catch(Exception e){
+        //         System.out.println(e);
+        //     }
+        //     System.out.println("Hello 2");
+        // }
     }
 }
 class threadr{
