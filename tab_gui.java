@@ -6,7 +6,7 @@ public class tab_gui{
     tab_gui(){
         frame = new JFrame("My Frame");
         String label[] = {"N1","N2"};
-        String data[][] = {{"name","one"},{"name2","two"}};
+        String data[][] = {{"name","one"},{"name2","two"},{"name3","three"}};
         table = new JTable(data,label);
         frame.add(table);
         frame.setSize(300,300);
